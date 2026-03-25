@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './AuthForm.css';
 import API from '../api';
 
-function AuthForm() {
+function AuthForm({ onLoginSuccess }) {
   const [isLogin, setIsLogin]   = useState(true);
   const [email, setEmail]       = useState('');
   const [password, setPassword] = useState('');
@@ -38,6 +38,7 @@ function AuthForm() {
         const res = await API.post('/auth/login', { email, password });
         localStorage.setItem('token', res.data.token);
         setSuccess('Logged in successfully! 🎉');
+        onLoginSuccess();
 
       } else {
         await API.post('/auth/register', { email, password });
