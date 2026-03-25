@@ -107,3 +107,28 @@ h2 {
 .switch-link:hover {
   text-decoration: underline;
 }
+
+.error-text {
+  color: #e53e3e;
+  font-size: 0.85rem;
+  background-color: #fff5f5;
+  border: 1px solid #feb2b2;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.success-text {
+  color: #276749;
+  font-size: 0.85rem;
+  background-color: #f0fff4;
+  border: 1px solid #9ae6b4;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.btn-primary:disabled {
+  background-color: #a5b4fc;
+  cursor: not-allowed;
+}
